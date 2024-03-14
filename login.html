@@ -1,0 +1,65 @@
+<html>
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="card"> 
+            <div class="inner-box" id="card">
+                <div class="card-front">
+                    <h2>Login</h2>
+                    <form>
+                        <input type="email" id="email" class="input-box" placeholder="your email " required>
+                        <input type="password" id="password" class="input-box" placeholder="**********" required>
+                        <button  type="submit" onclick="func()" class="submit-btn" > Submit </button>
+                        <input type="checkbox" ><span> Remember me </span>
+                    </form>
+                    <button type="button" class="btn" onclick="openRegister()" >I'm New Here</button>
+                    </div>
+                <div class="card-back">
+                    <h2>Register</h2>
+                    <form>
+                        <input type="text" class="input-box" placeholder="your name" required>
+                        <input type="email" class="input-box" placeholder="your email" required>
+                        <input type="password" class="input-box" placeholder="your password" required>
+                        <button  type="submit"  class="submit-btn" > Submit </button>
+                    </form>
+                    <button type="button" class="btn" onclick="openLogin()">I have an account</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var card = document.getElementById("card");
+        var emmail = document.getElementById("email").value;
+        var pass = document.getElementById('password').value;
+        function openRegister(){
+            card.style.transform = "rotateY(-180deg)";
+
+        }
+        function openLogin(){
+            card.style.transform = "rotateY(0deg)";
+            
+        }
+        function func()
+        {
+        if (emmail == "admin123@gmail.com" && pass == '123')
+            {
+                alert ("succes full !!")
+                window.location.assign("index.html")
+            }
+        else
+        {
+            alert("wrong entry invalid")
+        }
+        
+            
+    }
+
+
+    </script>
+</body>
+</html>
