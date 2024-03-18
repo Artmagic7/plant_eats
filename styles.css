@@ -1,13 +1,15 @@
-/* styles.css */
+/* style.css */
 
+/* Reset default browser styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
+/* Header styles */
 header {
-    background-color: #f2f2f2;
+    background-color: #56ab2f; /* Green color associated with plants */
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -17,9 +19,8 @@ header {
 header h1 {
     margin: 0;
     font-size: 24px;
-    color: #333;
+    color: #333; /* White text for better contrast */
 }
-
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -37,9 +38,11 @@ nav ul li a {
     font-weight: bold;
 }
 
+/* Introduction section styles */
 .intro {
     text-align: center;
     padding: 100px 20px;
+    background-color: #f2f2f2; /* Light gray background for contrast */
 }
 
 .intro img {
@@ -52,6 +55,7 @@ nav ul li a {
 .intro-text h2 {
     font-size: 36px;
     margin-bottom: 20px;
+    color: #333; /* Darker color for heading */
 }
 
 .intro-text p {
@@ -60,18 +64,23 @@ nav ul li a {
     margin-bottom: 30px;
 }
 
-/* Your existing CSS code */
-
+/* Featured recipes section */
 .features {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-top: 50px; /* Adjust margin as needed */
+    align-items: center; /* Align items to the top */
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+    margin-top: 50px;
 }
 
 .feature {
     text-align: center;
-    width: 30%; /* Adjust width as needed */
+    width: 30%; /* Adjusted width for responsiveness */
+    padding: 20px; /* Added padding for spacing */
+    background-color: #fff; /* White background for contrast */
+    border-radius: 10px; /* Rounded corners for cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    margin-bottom: 20px; /* Added margin for spacing between cards */
 }
 
 .large-feature-image {
@@ -82,10 +91,20 @@ nav ul li a {
     margin-bottom: 20px;
 }
 
+.feature h3 {
+    font-size: 24px; /* Larger font size for recipe titles */
+    margin-bottom: 10px;
+    color: #333; /* Darker color for better readability */
+}
 
+.feature p {
+    color: #666; /* Slightly darker text color */
+}
+
+/* Call-to-action button styles */
 .cta-button {
     display: inline-block;
-    background-color: #2ecc71;
+    background-color: #56ab2f; /* Green color for consistency */
     color: #fff;
     padding: 15px 30px;
     font-size: 18px;
@@ -96,7 +115,7 @@ nav ul li a {
 }
 
 .cta-button:hover {
-    background-color: #27ae60;
+    background-color: #4caf50; /* Slightly darker green on hover */
 }
 
 /* CSS for About Section */
@@ -186,4 +205,51 @@ nav ul li a {
     .bar {
         display: block;
     }
+}
+    
+/* Additional styles for navigation */
+section nav ul {
+    list-style: none;
+}
+
+section nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+section nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 17px;
+    transition: 0.1s;
+}
+
+section nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #A52A2A;
+    display: block;
+    transition: 0.2s linear;
+}
+
+section nav ul li a:hover::after {
+    width: 100%;
+}
+
+section nav ul li a:hover {
+    color: #A52A2A;
+}
+
+section nav .icon i {
+    font-size: 18px;
+    color: #000;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+section nav .icon i:hover {
+    color: #A52A2A;
 }
