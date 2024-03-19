@@ -1,22 +1,19 @@
-// Function to toggle the visibility of the navigation links
-function toggleMenu() {
-    var navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('active');
-}
+// Hamburger menu functionality
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
 
-document.addEventListener('DOMContentLoaded', function() {
-    const hamburgerMenu = document.querySelector('.hamburger-menu');
-    const navLinks = document.querySelector('.nav-links');
-    const navItems = document.querySelectorAll('.nav-links ul li');
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+});
 
-    hamburgerMenu.addEventListener('click', function() {
-        navLinks.classList.toggle('active');
-    });
+// Smooth scrolling for navigation links
+const navLinksAnchors = document.querySelectorAll('.nav-links a');
 
-    // Close the menu when a navigation link is clicked
-    navItems.forEach(function(item) {
-        item.addEventListener('click', function() {
-            navLinks.classList.remove('active');
-        });
-    });
+navLinksAnchors.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const targetId = e.currentTarget.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+    targetElement.scrollIntoView({ behavior: 'smooth' });
+  });
 });

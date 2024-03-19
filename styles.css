@@ -119,17 +119,17 @@ nav ul li a {
 }
 
 /* CSS for About Section */
-.about {
+.About {
     padding: 50px 20px;
     background-color: #f9f9f9;
 }
 
-.about h2 {
+.About h2 {
     text-align: center;
     margin-bottom: 30px;
 }
 
-.team-members {
+.Team {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -173,37 +173,68 @@ nav ul li a {
     margin-right: 5px;
 }
 
-/* Styles for screens smaller than 768px */
-@media only screen and (max-width: 768px) {
-    /* CSS rules for smaller screens */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: /* Set your desired background color */;
+    padding: 20px; /* Add some padding as needed */
+  }
+  
+  .footer_main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .footer_tag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px; /* Add some spacing between footer tags */
+  }
+  
+  .footer_tag p {
+    margin: 5px 0; /* Add some spacing between paragraphs */
+    text-align: center;
+  }
+/* Base styles */
 
-    /* New CSS styles for the hamburger menu */
+/* Tablet and desktop styles */
+@media screen and (min-width: 768px) {
+    /* Adjust layout for tablets and desktops */
+    .navbar {
+        display: block; /* Display the navbar as a block element */
+    }
+
     .nav-links {
-        display: none;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background-color: #f2f2f2;
-        width: 100%;
-        text-align: center;
+        display: flex; /* Use flexbox layout for navigation links */
+        justify-content: space-around; /* Distribute navigation links evenly */
+        align-items: center; /* Center align navigation links vertically */
     }
 
-    /* Initially hide the navigation links */
-    .nav-links {
-        display: none;
-    }
-
-    .nav-links.active {
-        display: block; /* Show nav links when hamburger menu is active */
-    }
-
-    .hamburger-menu {
-        display: block; /* Show hamburger menu on mobile */
-    }
-
-    /* Additional styling for the hamburger menu */
-    .bar {
-        display: block;
-    }
+    /* Add more styles for larger screens as needed */
 }
-    
+
+/* Mobile styles */
+@media screen and (max-width: 767px) {
+    /* Adjust layout for mobile devices */
+    .navbar {
+        display: none; /* Hide the navbar by default */
+    }
+
+    .menu-toggle {
+        display: block; /* Display the menu toggle button for mobile */
+    }
+
+    .nav-links {
+        /* Add mobile-specific styles */
+    }
+
+    /* Add more styles for smaller screens as needed */
+}
+
+html {
+    scroll-behavior: smooth;
+}
