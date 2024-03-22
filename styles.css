@@ -100,7 +100,9 @@ nav ul li a {
 .feature p {
     color: #666; /* Slightly darker text color */
 }
-
+.menu-toggle{
+    display:none;
+}
 /* Call-to-action button styles */
 .cta-button {
     display: inline-block;
@@ -218,7 +220,7 @@ footer {
 }
 
 /* Mobile styles */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 576x) {
     /* Adjust layout for mobile devices */
     .navbar {
         display: none; /* Hide the navbar by default */
